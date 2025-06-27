@@ -39,14 +39,7 @@
       </footer>
 </template>
 <script>
-import SettingItem from './SettingItem.vue';
 
-export default {
-  name: 'ProfileView',
-  components: {
-    SettingItem
-  }
-};
 </script>
 
 <!-- Ajoute ceci si tu veux un style scoped -->

@@ -3,21 +3,32 @@
     <Accueil/>
     <ProfileView />
     <Contacts />
+    <PhoneInput />
+    <VerificationCode/>
+  <!-- /*  <Message /> */ -->
   </div>
 </template>
 
 <script>
-import Accueil from './views/Accueil.vue'
-import ProfileView from './components/ProfileView.vue'
-import Contacts from './components/Contacts.vue'
+
+import ProfileView from './views/ProfileView.vue'
+import Contacts from './views/Contacts.vue'
+//import Message from './views/Message.vue';
 import Accueil from './views/Accueil.vue';
+import { faMessage } from '@fortawesome/free-regular-svg-icons';
+import PhoneInput from './views/PhoneInput.vue';
+import VerificationCode from './views/VerificationCode.vue';
 
 export default {
   name: 'App',
   components: {
     Accueil,
     ProfileView,
-    Contacts
+    Contacts,
+    PhoneInput,
+    VerificationCode
+
+   // Message
     // Pas de virgule après le dernier composant
   }
 }
