@@ -1,13 +1,22 @@
 <template>
-  <VerificationCode />
+  <WelcomeScreen />
+  
 </template>
 
 <script>
-import VerificationCode from './components/VerificationCode.vue'
+import WelcomeScreen from './components/MessageList.vue'
+import PhoneInput from './components/PhoneInput.vue';
 
 export default {
   components: {
-    VerificationCode
+    WelcomeScreen
   }
 }
 </script>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>
