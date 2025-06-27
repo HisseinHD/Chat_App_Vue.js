@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'WelcomeScreen'
+  name: 'Accueil',
 }
 </script>
 

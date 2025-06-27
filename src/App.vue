@@ -1,43 +1,36 @@
 <template>
-  <WelcomeScreen />
-  
+  <div id="app">
+    <Accueil/>
+    <ProfileView />
+    <Contacts />
+  </div>
 </template>
 
-
 <script>
-import WelcomeScreen from './components/MessageList.vue'
-import PhoneInput from './components/PhoneInput.vue';
+import Accueil from './views/Accueil.vue'
+import ProfileView from './components/ProfileView.vue'
+import Contacts from './components/Contacts.vue'
+import Accueil from './views/Accueil.vue';
 
 export default {
-  name: 'ProfileView.vue',
+  name: 'App',
   components: {
-    WelcomeScreen
-  }
+    Accueil,
     ProfileView,
-    contacts
+    Contacts
+    // Pas de virgule après le dernier composant
+  }
 }
-  };
 </script>
 
-<<<<<<< HEAD
-=======
-
 <style>
-body {
-  margin: 0;
-  padding: 0;
-}
-h1 {
-  color: black;
-}
-</style>
-
-
-
->>>>>>> nouvelle-fonction
-<style>
-body {
-  margin: 0;
-  padding: 0;
+/* Styles globaux */
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
