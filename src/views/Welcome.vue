@@ -2,12 +2,14 @@
   <div class="welcome-screen">
     <div class="content">
       <h1 class="title">What's up</h1>
-      <img class="hero-image" src="/src/assets/imgs/ima1.png" alt="Welcome Image">
       <p class="message">
-        Let's take advantage of the role and family<br>
+        Let's take advantage of the role and family<br />
         advances in our business.
       </p>
-      <button class="continue-button">
+      <img class="hero-image" src="/src/assets/imgs/ima1.png" alt="Welcome Image" />
+
+      <!-- Le bouton doit appeler une méthode -->
+      <button class="continue-button" @click="goToPhoneLogin">
         Continue with phone
       </button>
     </div>
@@ -16,14 +18,23 @@
 
 <script>
 export default {
-  name: 'Accueil',
-}
+  name: 'Welcome',
+  methods: {
+    goToPhoneLogin() {
+      this.$router.push('/phone-login'); // redirection
+    }
+  }
+};
 </script>
+
+</script>
+
 
 <style scoped>
 .welcome-screen {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   min-height: 100vh;
@@ -77,7 +88,6 @@ export default {
   background-color: #3367d6;
 }
 
-/* Responsive text size adjustments */
 @media (max-width: 600px) {
   .title {
     font-size: 1.5rem;
