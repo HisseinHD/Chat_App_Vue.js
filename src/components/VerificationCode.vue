@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>Enter code</h2>
-    <p>We've sent the code via SMS to +62 999 9999 000</p>
+    <p>We've sent the code via SMS to +235 66 62 88 54 </p>
     <div class="code-inputs">
       <input
         v-for="(digit, index) in code"
