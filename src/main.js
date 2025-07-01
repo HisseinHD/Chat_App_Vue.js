@@ -1,11 +1,12 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import './style.css';
+import App from './App.vue';
 
 import '@fortawesome/fontawesome-free/css/all.css';
 import router from './router';
 
+// Créez l'application Vue et utilisez le routeur
+const app = createApp(App);
 
-createApp(App).mount('#app')
-
-app.use(router);
+app.use(router); // Utilisation de Vue Router
+app.mount('#app'); // Montage de l'application sur l'élément DOM avec l'id "app"

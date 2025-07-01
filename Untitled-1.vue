@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <h2>Enter code</h2>
-    <p>We've sent the code via SMS to +235 66 62 88 54 </p>
+    <p>We've sent the code via SMS to +62 999 9999 000</p>
     <div class="code-inputs">
       <input
         v-for="(digit, index) in code"
@@ -25,13 +25,9 @@
 <script setup>
 import { ref, nextTick } from 'vue';
 
-// Tableau des chiffres
 const code = ref(['', '', '', '']);
-
-// Refs vers les champs
 const codeInputs = ref([]);
 
-// Fonction pour passer au champ suivant
 const onInput = (index) => {
   if (code.value[index] && index < codeInputs.value.length - 1) {
     nextTick(() => {
@@ -40,7 +36,6 @@ const onInput = (index) => {
   }
 };
 
-// Gestion du retour arrière
 const onBackspace = (index, event) => {
   if (event.key === 'Backspace' && !code.value[index] && index > 0) {
     nextTick(() => {
@@ -60,25 +55,11 @@ const onBackspace = (index, event) => {
   font-family: sans-serif;
   text-align: center;
 }
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
-}
-
 .code-inputs {
   display: flex;
   gap: 10px;
   margin: 20px 0;
 }
-
 .code-input {
   width: 40px;
   height: 40px;
@@ -86,25 +67,9 @@ p {
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 8px;
-  outline: none;
 }
-
-.code-input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
 .resend {
   color: #666;
   font-size: 14px;
-}
-
-.resend a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.resend a:hover {
-  text-decoration: underline;
 }
 </style>

@@ -8,7 +8,7 @@
       </p>
       <img class="hero-image" src="/src/assets/imgs/ima1.png" alt="Welcome Image" />
 
-      <!-- Le bouton doit appeler une méthode -->
+      <!-- Bouton pour rediriger vers PhoneLogin -->
       <button class="continue-button" @click="goToPhoneLogin">
         Continue with phone
       </button>
@@ -21,14 +21,12 @@ export default {
   name: 'Welcome',
   methods: {
     goToPhoneLogin() {
-      this.$router.push('/phone-login'); // redirection
+      // Redirection vers la page PhoneLogin
+      this.$router.push('/phone-login');
     }
   }
 };
 </script>
-
-</script>
-
 
 <style scoped>
 .welcome-screen {

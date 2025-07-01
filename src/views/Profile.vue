@@ -31,15 +31,18 @@
   </div>
 
 
-  <footer>
-        <div class="tab">Messages</div>
-        <div class="tab active">Contacts</div>
-        <div class="tab">Calls</div>
-        <div class="tab">Profile</div>
-      </footer>
+   <FooterNav :currentPage="'profile'" @navigate="handleNavigation" />
 </template>
 <script>
-
+import FooterNav from '../components/FooterNav.vue';
+export default {
+  components: { FooterNav },
+  methods: {
+    handleNavigation(page) {
+      this.$router.push(`/${page}`);
+    }
+  }
+}
 </script>
 
 <!-- Ajoute ceci si tu veux un style scoped -->

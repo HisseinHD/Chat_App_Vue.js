@@ -1,25 +1,24 @@
 <template>
   <footer class="footer-nav">
-    <button :class="{ active: currentPage === 'home' }" @click="$emit('navigate', 'home')">
-      <i class="fas fa-home"></i>
-      <span>Home</span>
+    <button :class="{ active: currentPage === 'messages' }" @click="$emit('navigate', 'messages')">
+      <i class="fas fa-comment"></i>
+      <span>Messages</span>
+    </button>
+     <button :class="{ active: currentPage === 'contacts' }" @click="$emit('navigate', 'contacts')">
+      <i class="fas fa-address-book"></i>
+      <span>Contacts</span>
+    </button>
+    <button :class="{ active: currentPage === 'Calls' }" @click="$emit('navigate', 'Calls')">
+      <i class="fas fa-phone"></i>
+      <span>Calls</span>
+      
+      
     </button>
     <button :class="{ active: currentPage === 'profile' }" @click="$emit('navigate', 'profile')">
       <i class="fas fa-user"></i>
       <span>Profile</span>
     </button>
-    <button :class="{ active: currentPage === 'messages' }" @click="$emit('navigate', 'messages')">
-      <i class="fas fa-comment"></i>
-      <span>Messages</span>
-    </button>
-    <button :class="{ active: currentPage === 'settings' }" @click="$emit('navigate', 'settings')">
-      <i class="fas fa-cog"></i>
-      <span>Settings</span>
-    </button>
-    <button :class="{ active: currentPage === 'contacts' }" @click="$emit('navigate', 'contacts')">
-      <i class="fas fa-address-book"></i>
-      <span>Contacts</span>
-    </button>
+   
   </footer>
 </template>
 

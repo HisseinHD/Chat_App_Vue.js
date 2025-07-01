@@ -1,4 +1,4 @@
-<!-- src/views/PhoneLogin.vue -->
+<!-- filepath: /home/hisseinhd6627/Bureau/Chat_App_Vue.js/src/views/PhoneLogin.vue -->
 <template>
   <div class="phone-input-container">
     <div class="header">
@@ -36,6 +36,7 @@
 
 <script>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { VueTelInput } from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -47,14 +48,11 @@ export default {
   },
   setup() {
     const phone = ref('');
+    const router = useRouter();
 
     const submit = () => {
-      if (phone.value.length >= 8) {
-        alert(`Phone submitted: ${phone.value}`);
-        // Tu peux rediriger ou envoyer une requête ici
-      } else {
-        alert('Please enter a valid phone number');
-      }
+      // Redirection vers la page de vérification du code, même si le numéro est invalide
+      router.push('/verification-code');
     };
 
     return {
@@ -80,7 +78,7 @@ export default {
 .header h2 {
   font-size: 1.8rem;
   margin-bottom: 8px;
-  color: #333;
+  color: #c92323;
 }
 
 .header p {
@@ -99,7 +97,7 @@ export default {
   background-color: white;
   border-radius: 8px;
   padding: 8px 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(40, 106, 228, 0.1);
   margin-bottom: 20px;
 }
 
@@ -113,7 +111,7 @@ export default {
 }
 
 .input-field::placeholder {
-  color: #aaa;
+  color: #e9dddd;
 }
 
 .phone-icon {
@@ -122,7 +120,7 @@ export default {
 }
 
 .continue-button {
-  background-color: #313438;
+  background-color: #e9edf1;
   color: white;
   border: none;
   border-radius: 30px;
