@@ -28,15 +28,15 @@
       <SettingItem title="Privacy policy" icon="🛡️" />
       <SettingItem title="Ask a question" icon=" 💬" />
     </div>
-  </div>
-
-
-  <footer>
-        <div class="tab">Messages</div>
-        <div class="tab active">Contacts</div>
-        <div class="tab">Calls</div>
-        <div class="tab">Profile</div>
+  
+    <footer>
+        <div class="tab">Messages <br><i class="bi bi-chat-square-dots"></i></div>
+        <div class="tab active">Contacts <br><i class="bi bi-people"></i></div>
+        <div class="tab">Calls <br><i class="bi bi-telephone"></i></div>
+        <div class="tab">Profile <br><i class="bi bi-person"></i></div>
       </footer>
+    </div>
+ 
 </template>
 <script>
 import SettingItem from './SettingItem.vue';

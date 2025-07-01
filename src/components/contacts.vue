@@ -10,7 +10,7 @@
           <i>👥</i> <span>Invite friends</span>
         </div>
         <div class="action-item">
-          <i>📍</i> <span>Find people nearby</span>
+          <i class="bi bi-geo-alt"></i><span>Find people nearby</span>
         </div>
       </div>
   
@@ -34,10 +34,10 @@
       </div>
   
       <footer>
-        <div class="tab">Messages</div>
-        <div class="tab active">Contacts</div>
-        <div class="tab">Calls</div>
-        <div class="tab">Profile</div>
+        <div class="tab">Messages <br><i class="bi bi-chat-square-dots"></i></div>
+        <div class="tab active">Contacts <br><i class="bi bi-people"></i></div>
+        <div class="tab">Calls <br><i class="bi bi-telephone"></i></div>
+        <div class="tab">Profile <br><i class="bi bi-person"></i></div>
       </footer>
     </div>
   </template>

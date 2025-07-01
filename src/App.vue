@@ -1,27 +1,27 @@
 <template>
-  <VerificationCode />
-<contacts/>
-  <ProfileView />
+  <div id="app">
+    <ProfileView />
+    <Contacts />
+    <Navbar />
+  <NavbarItem title="Home" icon="bi bi-chat-square-dots" />
+  </div>
 </template>
 
-
 <script>
-import VerificationCode from './components/VerificationCode.vue'
-
 import ProfileView from './components/ProfileView.vue';
-import contacts from './components/contacts.vue'; 
+import Contacts from './components/contacts.vue';
+import Navbar from './components/Navbar.vue';
+// import NavbarItem from './components/NavbarItem.vue';
 
 export default {
-  name: 'ProfileView.vue',
+  name: 'App',
   components: {
-    VerificationCode
-  }
     ProfileView,
-    contacts
-}
-  };
+    Contacts,
+    Navbar
+  },
+};
 </script>
-
 
 <style>
 body {
@@ -32,5 +32,3 @@ h1 {
   color: black;
 }
 </style>
-
-
