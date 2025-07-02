@@ -1,5 +1,6 @@
 <!-- filepath: /home/hisseinhd6627/Bureau/Chat_App_Vue.js/src/views/VerificationCode.vue -->
 <template>
+  <div class="HH">
   <div class="container">
     <h2>Enter code</h2>
     <p>We've sent the code via SMS to +235 66 62 88 54 </p>
@@ -22,6 +23,7 @@
   Didn't get the code?
   <a href="#" @click.prevent="goToUsernamePage">Resend code</a>
 </p>
+  </div>
   </div>
 </template>
 
@@ -64,6 +66,9 @@ const onBackspace = (index, event) => {
 </script>
 
 <style scoped>
+.HH {
+  background-color: rgba(253, 243, 243, 0.5);
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -72,17 +77,26 @@ const onBackspace = (index, event) => {
   height: 100vh;
   font-family: sans-serif;
   text-align: center;
+  background-color: #f8f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #e60a0a;
 }
 
 p {
   font-size: 1rem;
-  color: #666;
+  color: #1c0fd8;
   margin-bottom: 20px;
 }
 
@@ -97,7 +111,7 @@ p {
   height: 40px;
   font-size: 24px;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid #4d4545;
   border-radius: 8px;
   outline: none;
 }
@@ -108,7 +122,7 @@ p {
 }
 
 .resend {
-  color: #666;
+  color: #2c2727;
   font-size: 14px;
 }
 
