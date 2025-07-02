@@ -3,7 +3,7 @@
     <!-- Affiche la vue actuelle selon la route -->
     <router-view />
     
-    <!-- Affiche le FooterNav si la route n'est pas "Welcome" -->
+    <!-- Affiche le FooterNav si la route n'est pas dans la liste des pages à masquer -->
     <FooterNav 
       v-if="showFooter" 
       :currentPage="currentPage" 
@@ -26,7 +26,9 @@ export default {
   computed: {
     // Affiche ou masque le footer selon la route
     showFooter() {
-      return this.$route.name !== 'Welcome';
+      // Liste des pages où le footer doit être masqué
+      const hiddenPages = ['Welcome', 'phone-login', 'verification-code','NomUtilisateur' ];
+      return !hiddenPages.includes(this.$route.name);
     }
   },
   watch: {

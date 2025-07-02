@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="chat-header">
       <div class="header-left">
-        <div class="avatar">AB</div>
+        <button><div class="avatar">AB</div></button>
         <div class="user-info">
           <div class="user-name">Antonio Banderas</div>
           <div class="user-status">Online</div>

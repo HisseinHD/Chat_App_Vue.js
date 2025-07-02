@@ -1,7 +1,7 @@
 
 <template>
   <footer class="footer-nav">
-    <button :class="{ active: currentPage === 'messages' }" @click="$emit('navigate', 'messages')">
+    <button :class="{ active: currentPage === 'Discussion' }" @click="$emit('navigate', 'Discussion')">
       <i class="bi bi-chat-square-dots"></i>
       <span>Messages</span>
     </button>

@@ -25,13 +25,8 @@ const username = ref('');
 const router = useRouter();
 
 const goNext = () => {
-  if (username.value.trim()) {
-    alert(`Hello ${username.value}!`);
-    // Redirection vers une autre page (par exemple, "/contacts")
-    router.push('/contacts');
-  } else {
-    alert('Please enter a valid name.');
-  }
+  // Redirection vers la page "/Discution" sans condition
+  router.push('/Discussion');
 };
 </script>
 

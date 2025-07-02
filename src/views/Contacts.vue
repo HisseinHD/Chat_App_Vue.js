@@ -10,7 +10,7 @@
         <i>👥</i> <span>Invite friends</span>
       </div>
       <div class="action-item">
-        <i>📍</i> <span>Find people nearby</span>
+        <button><i>📍</i> <span>Find people nearby</span></button>
       </div>
     </div>
 
@@ -49,6 +49,11 @@ export default {
     return {
       currentPage: 'contacts',
       contacts: [
+        { initials: 'AB', name: 'Antonio Banderas', status: 'Online' },
+        { initials: 'BC', name: 'Bessie Cooper', status: 'Last seen today at 8:40' },
+        { initials: 'LA', name: 'Leslie Alexander', status: 'Last seen today at 8:40' },
+        { initials: 'JJ', name: 'Jacob Jones', status: 'Last seen today at 8:40' },
+        { initials: 'FM', name: 'Floyd Miles', status: 'Last seen long time ago' },
         { initials: 'AB', name: 'Antonio Banderas', status: 'Online' },
         { initials: 'BC', name: 'Bessie Cooper', status: 'Last seen today at 8:40' },
         { initials: 'LA', name: 'Leslie Alexander', status: 'Last seen today at 8:40' },
