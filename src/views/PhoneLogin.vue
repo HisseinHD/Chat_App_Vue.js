@@ -1,4 +1,3 @@
-<!-- filepath: /home/hisseinhd6627/Bureau/Chat_App_Vue.js/src/views/PhoneLogin.vue -->
 <template>
   <div class="phone-input-container">
     <div class="header">
@@ -16,14 +15,14 @@
         placeholder="Enter your phone number"
       >
         <template #icon-left>
-          <i class="fas fa-globe"></i>
+          <i class="bi bi-globe"></i> <!-- Icône globe terrestre Bootstrap -->
         </template>
       </vue-tel-input>
     </div>
 
     <!-- Champ texte classique (optionnel ou à supprimer) -->
     <div class="input-container">
-      <i class="fas fa-phone phone-icon"></i>
+      <i class="bi bi-telephone phone-icon"></i> <!-- Icône téléphone Bootstrap -->
       <input type="text" class="input-field" placeholder="Other field (optional)" />
     </div>
 
@@ -39,7 +38,6 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { VueTelInput } from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
-import '@fortawesome/fontawesome-free/css/all.css';
 
 export default {
   name: 'PhoneLogin',
@@ -51,7 +49,7 @@ export default {
     const router = useRouter();
 
     const submit = () => {
-      // Redirection vers la page de vérification du code, même si le numéro est invalide
+      // Redirection vers la page de vérification du code
       router.push('/verification-code');
     };
 

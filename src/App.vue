@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import VerificationCode from './components/VerificationCode.vue'
-import ChatView from './components/ChatView.vue'
+import FooterNav from './components/FooterNav.vue';
+
 export default {
   name: 'App',
   components: { FooterNav },
@@ -45,7 +45,7 @@ export default {
       this.$router.push({ name: page });
     }
   }
-}
+};
 </script>
 
 <style>

@@ -5,7 +5,7 @@ import App from './App.vue';
 import '@fortawesome/fontawesome-free/css/all.css';
 import router from './router';
 
-// Créez l'application Vue et utilisez le routeur
+
 const app = createApp(App);
 
 app.use(router); // Utilisation de Vue Router

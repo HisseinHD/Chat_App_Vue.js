@@ -5,7 +5,7 @@
       <div class="header-left">
         <div class="avatar">AB</div>
         <div class="user-info">
-          <div class="user-name">Antonio banderas</div>
+          <div class="user-name">Antonio Banderas</div>
           <div class="user-status">Online</div>
         </div>
       </div>
@@ -32,52 +32,49 @@
       <input
         type="text"
         v-model="newMessage"
-        placeholder="Type a message"/>
-      
+        placeholder="Type a message"
+      />
       <button type="button" class="icon">😊</button>
-    <button type="submit" class="icon">📩</button>
-
+      <button type="submit" class="icon">📩</button>
     </form>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 const messages = ref([
-  { text: "salut ma belle comment tu va?", time: "9:23", fromMe: false },
-  { text: "What tools do you use ?", time: "9:23", fromMe: false },
-  { text: "Figma,for orototype i use principler", time: "9:23", fromMe: true },
-  { text: "Cool ! Your design inspire me a lot", time: "9:23", fromMe: false },
-  { text: "Thank u so much Antoan", time: "9:23", fromMe: true },
-  { text: "you’re welcome", time: "9:23", fromMe: false },
-])
+  { text: "Salut ma belle, comment tu vas ?", time: "9:23", fromMe: false },
+  { text: "What tools do you use?", time: "9:23", fromMe: false },
+  { text: "Figma, for prototype I use Principle", time: "9:23", fromMe: true },
+  { text: "Cool! Your design inspires me a lot", time: "9:23", fromMe: false },
+  { text: "Thank you so much, Antonio!", time: "9:23", fromMe: true },
+  { text: "You're welcome", time: "9:23", fromMe: false },
+]);
 
-const newMessage = ref('')
+const newMessage = ref('');
 
 const send = () => {
   if (newMessage.value.trim()) {
     messages.value.push({
       text: newMessage.value.trim(),
       time: "9:24",
-      fromMe: true
-    })
-    newMessage.value = ''
+      fromMe: true,
+    });
+    newMessage.value = '';
   }
-}
+};
 </script>
 
 <style scoped>
+/* Container */
 .chat-container {
-  max-width: 375px;
-  margin: auto;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   font-family: sans-serif;
-  box-shadow: 0 2px 5px rgba(16, 108, 230, 0.1);
+  background-color: #f9f9f9;
 }
 
 /* Header */
@@ -128,7 +125,6 @@ const send = () => {
   flex: 1;
   padding: 10px 16px;
   overflow-y: auto;
-  background-color:red;
 }
 
 .chat-date {
@@ -168,7 +164,7 @@ const send = () => {
 
 .message-time {
   font-size: 11px;
-  color: #f1f1f1;
+  color: #888;
   margin-top: 3px;
 }
 
@@ -178,7 +174,7 @@ const send = () => {
   align-items: center;
   padding: 15px 12px;
   border-top: 1px solid #eee;
-  background-color:white;
+  background-color: white;
   gap: 8px;
 }
 
@@ -186,10 +182,10 @@ const send = () => {
   flex: 1;
   border: none;
   outline: none;
-  font-size: 11px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 8px;
-  background-color:#fde8bb;
+  background-color: #fde8bb;
 }
 
 .icon {
@@ -197,5 +193,40 @@ const send = () => {
   border: none;
   font-size: 18px;
   cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chat-header {
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .chat-messages {
+    padding: 8px;
+  }
+
+  .message-bubble {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .chat-input {
+    padding: 10px;
+  }
+
+  .chat-input input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
 }
 </style>

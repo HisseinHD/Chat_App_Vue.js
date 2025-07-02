@@ -47,8 +47,13 @@ export default {
   },
   data() {
     return {
-      currentPage: 'home',
+      currentPage: 'contacts',
       contacts: [
+        { initials: 'AB', name: 'Antonio Banderas', status: 'Online' },
+        { initials: 'BC', name: 'Bessie Cooper', status: 'Last seen today at 8:40' },
+        { initials: 'LA', name: 'Leslie Alexander', status: 'Last seen today at 8:40' },
+        { initials: 'JJ', name: 'Jacob Jones', status: 'Last seen today at 8:40' },
+        { initials: 'FM', name: 'Floyd Miles', status: 'Last seen long time ago' },
         { initials: 'AB', name: 'Antonio Banderas', status: 'Online' },
         { initials: 'BC', name: 'Bessie Cooper', status: 'Last seen today at 8:40' },
         { initials: 'LA', name: 'Leslie Alexander', status: 'Last seen today at 8:40' },
@@ -60,24 +65,23 @@ export default {
   methods: {
     handleNavigation(page) {
       this.currentPage = page;
-      console.log('Navigating to:', page);
-      // Uncomment the line below if you want to enable routing
-      // this.$router.push({ name: page });
+      this.$router.push({ name: page });
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .contacts-container {
   font-family: sans-serif;
-  max-width: 100%; /* Utilisation de toute la largeur de l'écran */
+  max-width: 100%;
   margin: 0 auto;
   background-color: #fff;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box; /* Inclure les bordures et padding dans la largeur totale */
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 header {
@@ -94,6 +98,10 @@ header {
 
 .actions {
   border-bottom: 8px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .action-item {
@@ -141,22 +149,40 @@ header {
   color: green;
 }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
-  width: 100%; /* S'assurer que le footer occupe toute la largeur */
-  box-sizing: border-box;
-}
+@media (max-width: 600px) {
+  .contacts-container {
+    padding: 10px;
+  }
 
-.tab {
-  font-size: 13px;
-  color: #777;
-}
+  header h2 {
+    font-size: 1.2rem;
+  }
 
-.tab.active {
-  color: black;
-  font-weight: bold;
+  .search-icon {
+    font-size: 16px;
+  }
+
+  .action-item {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .contact-item {
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .info .name {
+    font-size: 14px;
+  }
+
+  .status {
+    font-size: 10px;
+  }
 }
 </style>

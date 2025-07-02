@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-container">
+
     <!-- Header -->
     <div class="header">
       <h2>My profiles</h2>
@@ -12,7 +12,6 @@
         </div>
       </div>
 
-      <!-- Settings -->
       <div class="section">
         <h3>Settings</h3>
       </div>
@@ -20,7 +19,8 @@
       <SettingItem title="privacy and security" icon="🔒" />
       <SettingItem title="Chats" icon="💬" />
       <SettingItem title="Storage and date" icon="📊" />
-      <!-- Help -->
+      
+      
       <div class="section">
         <h3>Help</h3>
       </div>
@@ -28,8 +28,6 @@
       <SettingItem title="Privacy policy" icon="🛡️" />
       <SettingItem title="Ask a question" icon=" 💬" />
     </div>
-  </div>
-
 
    <FooterNav :currentPage="'profile'" @navigate="handleNavigation" />
 </template>
@@ -45,8 +43,7 @@ export default {
 }
 </script>
 
-<!-- Ajoute ceci si tu veux un style scoped -->
-<!-- <style src="./ProfileView.vue" scoped></style> -->
+
 <style>
 .profile-container {
   font-family: 'Arial', sans-serif;

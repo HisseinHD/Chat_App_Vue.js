@@ -1,4 +1,3 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -6,6 +5,11 @@ const routes = [
     path: '/',
     name: 'Welcome',
     component: () => import('../views/Welcome.vue'),
+  },
+  {
+    path: '/nom-utilisateur',
+    name: 'NomUtilisateur',
+    component: () => import('../views/NomUtilisateur.vue'), 
   },
   {
     path: '/phone-login',
@@ -31,11 +35,6 @@ const routes = [
     path: '/contacts',
     name: 'contacts',
     component: () => import('../views/Contacts.vue'),
-  },
-  {
-    path: '/create-name',
-    name: 'NomUtilisateur',
-    component: () => import('../views/NomUtilisateur.vue'), // Ce fichier doit exister
   },
 ];
 

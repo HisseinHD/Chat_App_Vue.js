@@ -18,12 +18,24 @@
         @keydown.backspace="onBackspace(index, $event)"
       />
     </div>
-    <p class="resend">Didn't get the code? <a href="#">Resend code</a></p>
+   <p class="resend">
+  Didn't get the code?
+  <a href="#" @click.prevent="goToUsernamePage">Resend code</a>
+</p>
   </div>
 </template>
 
 <script setup>
+
 import { ref, nextTick } from 'vue';
+import { useRouter } from 'vue-router'; // ← 👈 à ajouter
+
+const router = useRouter(); // ← 👈 obligatoire pour utiliser router.push
+
+// Fonction de redirection
+const goToUsernamePage = () => {
+  router.push('/nom-utilisateur');
+};
 
 // Tableau des chiffres
 const code = ref(['', '', '', '']);
@@ -48,6 +60,7 @@ const onBackspace = (index, event) => {
     });
   }
 };
+
 </script>
 
 <style scoped>

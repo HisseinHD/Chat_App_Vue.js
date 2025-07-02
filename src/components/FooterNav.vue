@@ -1,24 +1,22 @@
+
 <template>
   <footer class="footer-nav">
     <button :class="{ active: currentPage === 'messages' }" @click="$emit('navigate', 'messages')">
-      <i class="fas fa-comment"></i>
+      <i class="bi bi-chat-square-dots"></i>
       <span>Messages</span>
     </button>
-     <button :class="{ active: currentPage === 'contacts' }" @click="$emit('navigate', 'contacts')">
-      <i class="fas fa-address-book"></i>
+    <button :class="{ active: currentPage === 'contacts' }" @click="$emit('navigate', 'contacts')">
+      <i class="bi bi-people"></i>
       <span>Contacts</span>
     </button>
-    <button :class="{ active: currentPage === 'Calls' }" @click="$emit('navigate', 'Calls')">
-      <i class="fas fa-phone"></i>
+    <button :class="{ active: currentPage === 'calls' }" @click="$emit('navigate', 'calls')">
+      <i class="bi bi-telephone"></i>
       <span>Calls</span>
-      
-      
     </button>
     <button :class="{ active: currentPage === 'profile' }" @click="$emit('navigate', 'profile')">
-      <i class="fas fa-user"></i>
+      <i class="bi bi-person"></i>
       <span>Profile</span>
     </button>
-   
   </footer>
 </template>
 
